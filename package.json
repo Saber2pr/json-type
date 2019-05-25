@@ -1,6 +1,6 @@
 {
   "name": "@saber2pr/json-type",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "https://github.com/Saber2pr/json-type.git",
   "repository": {
     "type": "git",
@@ -16,7 +16,7 @@
     "jsonType": "./lib/index.js"
   },
   "scripts": {
-    "test": "node ./lib/index.js ./test/test.json",
+    "test": "node ./lib/index.js ./test ./test",
     "start": "tsc --watch"
   },
   "keywords": [

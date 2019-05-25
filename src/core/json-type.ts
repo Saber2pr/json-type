@@ -1,6 +1,6 @@
 import { FS, Terminal } from '@saber2pr/node'
 import { Type } from './utils/type'
-import { dirname } from 'path'
+import { dirname, extname } from 'path'
 
 const [input, output = dirname(input)] = Terminal.getParams()
 
@@ -9,7 +9,9 @@ export async function App() {
 
   if (!(await FS.exists(output))) await FS.mkPath(output)
 
-  const jsonFiles = isDir ? await FS.search(input, 'file') : [input]
+  const jsonFiles = isDir
+    ? (await FS.search(input, 'file')).filter(f => extname(f) === '.json')
+    : [input]
 
   const result = await Promise.all(
     jsonFiles.map<Promise<[string, string]>>(async path => {
