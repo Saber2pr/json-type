@@ -40,7 +40,7 @@ export async function App() {
 }
 
 const toInterface = (name: string, content: string) =>
-  `interface ${name.toUpperCase()} ${content}`
+  `interface ${headUpper(name)} ${content}`
 
 const resolvPath = (path: string) =>
   '.' + path.split('.').filter(_ => _)[0] + '.d.ts'
@@ -71,4 +71,6 @@ const parseObj = (data: Object) => {
 const parseArr = (arr: Array<any>) =>
   `Array<${resolveJsonToInterf(JSON.stringify(transform(arr[0])))}>`
 
-const filterChar = (word: string) => word.replace(/\/|\@/g, '_')
+const filterChar = (word: string) => word.replace(/\/|\@|\.|\-/g, '_')
+
+const headUpper = (word: string) => word.charAt(0).toUpperCase() + word.slice(1)

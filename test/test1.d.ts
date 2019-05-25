@@ -1,1 +1,1 @@
-interface TEST1 {test:Array<string>}
+interface Test1 {test:Array<string>}

@@ -1,1 +1,1 @@
-interface TEST {name:string,fff:boolean,test:Array<{name:string,fff:boolean,test:Array<{name:string,fff:boolean}>}>}
+interface Test {name:string,fff:boolean,test:Array<{name:string,fff:boolean,test:Array<{name:string,fff:boolean}>}>}
