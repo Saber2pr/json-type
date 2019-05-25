@@ -52,6 +52,8 @@ function transform(data: Object) {
     return parseObj(data)
   } else if (Type.isArray(data)) {
     return parseArr(data)
+  } else {
+    return typeof data
   }
 }
 
@@ -61,10 +63,12 @@ const parseObj = (data: Object) => {
   if (!Type.isObject(data)) return typeof data
 
   return Object.entries(data).reduce(
-    (out, [k, v]) => Object.assign(out, { [k]: parseObj(v) }),
+    (out, [k, v]) => Object.assign(out, { [filterChar(k)]: parseObj(v) }),
     {}
   )
 }
 
 const parseArr = (arr: Array<any>) =>
   `Array<${resolveJsonToInterf(JSON.stringify(transform(arr[0])))}>`
+
+const filterChar = (word: string) => word.replace(/\/|\@/g, '_')

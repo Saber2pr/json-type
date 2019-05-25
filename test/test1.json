@@ -1,15 +1,3 @@
 {
-  "name": "saber",
-  "fff": true,
-  "test": [{
-    "name": "saber1pr",
-    "fff": false,
-    "test": [{
-      "name": "saber2pr",
-      "fff": true
-    }, {
-      "name": "saber3pr",
-      "fff": false
-    }]
-  }]
+  "test": ["a", "B"]
 }
