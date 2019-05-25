@@ -4,10 +4,19 @@
 
 ```bash
 # from npm
-npm install @saber2pr/json-type
+npm install @saber2pr/json-type -g
 
 # from github
-git clone ___
+git clone https://github.com/Saber2pr/json-type.git
+```
+
+# Usage
+
+```bash
+jsonType ./test.json
+
+jsonType ./test/test.json ./outDir
+
 ```
 
 ---

@@ -1,10 +1,10 @@
 {
   "name": "@saber2pr/json-type",
   "version": "0.0.1",
-  "description": "___",
+  "description": "https://github.com/Saber2pr/json-type.git",
   "repository": {
     "type": "git",
-    "url": "git+___"
+    "url": "git+https://github.com/Saber2pr/json-type.git"
   },
   "author": "saber2pr",
   "license": "ISC",
@@ -12,11 +12,18 @@
     "lib/core/*",
     "lib/index.*"
   ],
-  "bin": "./lib/index.js",
+  "bin": {
+    "jsonType": "./lib/index.js"
+  },
   "scripts": {
     "test": "node ./lib/index.js ./test/test.json",
     "start": "tsc --watch"
   },
+  "keywords": [
+    "json",
+    "typescript",
+    "types"
+  ],
   "devDependencies": {
     "typescript": "^3.4.3"
   },
