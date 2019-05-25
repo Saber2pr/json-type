@@ -17,6 +17,8 @@ jsonType ./test.json
 
 jsonType ./test/test.json ./outDir
 
+npx @saber2pr/json-type ./test.json
+
 ```
 
 ---
