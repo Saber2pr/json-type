@@ -1,0 +1,26 @@
+{
+  "name": "@saber2pr/json-type",
+  "version": "0.0.1",
+  "description": "___",
+  "repository": {
+    "type": "git",
+    "url": "git+___"
+  },
+  "author": "saber2pr",
+  "license": "ISC",
+  "files": [
+    "lib/core/*",
+    "lib/index.*"
+  ],
+  "bin": "./lib/index.js",
+  "scripts": {
+    "test": "node ./lib/index.js ./test/test.json",
+    "start": "tsc --watch"
+  },
+  "devDependencies": {
+    "typescript": "^3.4.3"
+  },
+  "dependencies": {
+    "@saber2pr/node": "^0.1.8"
+  }
+}
