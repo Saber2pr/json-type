@@ -1,6 +1,6 @@
 {
   "name": "@saber2pr/json-type",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "https://github.com/Saber2pr/json-type.git",
   "repository": {
     "type": "git",
@@ -10,7 +10,8 @@
   "license": "ISC",
   "files": [
     "lib/core/*",
-    "lib/index.*"
+    "lib/index.*",
+    "lib/app.js"
   ],
   "bin": {
     "jsonType": "./lib/app.js"
